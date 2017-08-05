@@ -1,27 +1,20 @@
-docker-lemp
+thiennq/docker-lemp
 ===========
 
-[![Docker Stars](https://img.shields.io/docker/stars/stenote/docker-lemp.svg)](https://hub.docker.com/r/stenote/docker-lemp/)
-[![Docker Pulls](https://img.shields.io/docker/pulls/stenote/docker-lemp.svg)](https://hub.docker.com/r/stenote/docker-lemp/)
-
-
-We suppose this is a develop environment for phpers.
-
-Don't use it in product environment.
+Forked from stenote/docker-lemp
+For develop/staging only, don't use it in production.
 
 # Usage
-
+```bash
     docker run -d --name=lemp \
       -v /path/to/www/:/var/www/ \
       -v /path/to/mysql:/var/lib/mysql \
       -p port_of_nginx:80 \
-      stenote/docker-lemp:latest
-
+      thiennq/docker-lemp:latest
+```
 # Detail
+- small fix for WordPress compatible
 
 ## MySQL
 * user: root
 * (No password)
-
-## SSH
-We don't support SSH right now. You can use `docker exec` to enter the docker container.
