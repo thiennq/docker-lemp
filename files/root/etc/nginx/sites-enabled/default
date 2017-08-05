@@ -7,14 +7,7 @@ server {
     charset utf8;
 
     location / {
-
-        gzip on;
-        try_files $uri/index.php $uri /index.php;
-
-        if (!-f $request_filename) {
-            rewrite (.*) /index.php;
-        }
-
+        try_files $uri $uri/ /index.php?$args;
     }
 
     location ~ .*\.(gif|jpg|jpeg|png|bmp|swf)$ {
