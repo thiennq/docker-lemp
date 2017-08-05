@@ -11,8 +11,8 @@ RUN apt update && \
                        nginx \
                        curl \
 		       supervisor && \
-    echo "mysql-server mysql-server/root_password password" | debconf-set-selections && \
-    echo "mysql-server mysql-server/root_password_again password" | debconf-set-selections && \
+    echo "mysql-server mysql-server/root_password $MYSQL_PASSWORD" | debconf-set-selections && \
+    echo "mysql-server mysql-server/root_password_again $MYSQL_PASSWORD" | debconf-set-selections && \
     apt install -y mysql-server && \
     rm -rf /var/lib/apt/lists/*
 
