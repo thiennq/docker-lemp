@@ -2,7 +2,7 @@ FROM ubuntu:16.04
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV MYSQL_USERNAME root
-ENV MYSQL_PASSWORD ""
+ENV MYSQL_PASSWORD root
 
 
 ## Install php nginx mysql supervisor
