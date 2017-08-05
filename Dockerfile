@@ -1,6 +1,9 @@
 FROM ubuntu:16.04
 
 ENV DEBIAN_FRONTEND noninteractive
+ENV MYSQL_USERNAME root
+ENV MYSQL_PASSWORD ""
+
 
 ## Install php nginx mysql supervisor
 RUN apt update && \
